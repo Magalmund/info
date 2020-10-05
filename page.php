@@ -6,7 +6,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div id="news" class="col-xl-7">
+        <div id="news" class="col-xl-8">
             <div class="news-frame">
                 <div class="frame">
                 <h1>Uudised</h1>
@@ -47,13 +47,31 @@
                     <div id="lessons">
                         <div class="frame">
                             <h3>Koolitundid</h3>
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <ul>
+                                        <li><span>Урок 1</span><span>8.00-9.00</span></li>
+                                        <li><span>Урок 1</span><span>9.00-10.00</span></li>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-xl-6">
+                                    <ul>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                        <li><span>Урок 1</span><span>10.00-11.00</span></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 </div>
             </div>
         </div>
-        <div id="changes" class="col-xl-5">
+        <div id="changes" class="col-xl-4">
             <div class="frame">
                 <h1>Muudatused</h1>
                 <?php $catquery = new WP_Query( 'cat=2&posts_per_page=3' ); ?>
@@ -70,18 +88,6 @@
             </div>
         </div>
     </div>
-    <!--<div class="row">
-        <div id="weather" class="col-xl-9">
-        </div>
-        <div id="time" class="col-xl-3">
-        </div>
-    </div>
-    <div class="row">
-        <div id="lessons" class="col-xl-9">
-        </div>
-        <div id="logo" class="col-xl-3">
-        </div>
-    </div>-->
 </div>
 </main>
 <?php get_footer(); ?>

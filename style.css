@@ -104,46 +104,58 @@ body {height:100%; margin:0; background:linear-gradient( rgba(0, 0, 0, 0.4), rgb
 main, .container-fluid {height:100%}
 h1,h2,h3 {font-family:Playfair}
 p, span, a {font-family:OpenSans}
-h1 {padding:60px 45px 60px 45px; margin:0; color:#d77a06; letter-spacing:2vh; text-transform:uppercase; text-align:center; font-size:45px}
+h1 {padding:0 0 60px 0; margin:0; color:#d77a06; letter-spacing:2vh; text-transform:uppercase; text-align:center; font-size:45px}
 h2 {font-size:28px; margin:0; color:#0759a2; position:relative}
-h3 {margin:0; padding:30px 15px; text-align:center; color:#0759a2; text-transform:uppercase; letter-spacing:1vh; font-size:22px}
+h3 {margin:0; padding:0 0 30px 0; text-align:center; color:#d77a06; text-transform:uppercase; letter-spacing:1vh; font-size:22px}
 span {color:#0759a2; font-weight:bold}
 p {margin:0; line-height:2em}
 
 /*FIRST-ROW*/
 #news {height:100%; color:#000; padding:45px 5px 45px 45px}
 #changes {height:100%; color:#000; padding:45px 45px 45px 5px}
-
+#news .news-frame:first-child .frame, #changes .frame {padding:60px 45px}
 #news .news-frame:nth-child(1) {height:70%; padding:0 0 5px 0}
-#news .news-frame:nth-child(2) {height:30%; padding:5px 0 0 0}
-#news .news-frame:nth-child(2) .frame.row {background:none; margin:0}
-#news .news-frame:nth-child(2) .col-xl-8 {padding:0; display:flex}
-#news .news-frame:nth-child(2) .col-xl-4 {padding:0}
-
-#logo {width:40%; padding:0 5px 0 0}
-#logo .frame {display:flex; justify-content:center}
-
-#logo .padding-logo {display:flex; align-items:center; justify-content:center; padding:20px 0}
-#image-logo {background:url('img/tpg.svg'); transition:all 0.3s; background-repeat:no-repeat; width:265px; height:133px}
-#image-logo.image{background-size:cover !important; position:relative;display:block}
-#timedate {width:30%; padding:0 5px}
-#timedate .frame {background:#d77a06}
-#weather {width:30%; padding:0 5px 0 5px}
-#weather .frame {background:#0759a2}
-#lessons {height:100%; padding:0 0 0 5px}
 
 h2::before {content:""; position:absolute; bottom:0; width:75px; height:1px; width:50px; background:#0759a2}
 .row:nth-child(1) {height:100%}
 .frame {height:100%; background:rgba(255,255,255, 1)}
-.post {padding:15px 45px}
-#news .post:last-child, #changes .post:last-child {padding:15px 45px 30px 45px}
+.post:first-child {0 0 15px 0}
+.post {padding:15px 0}
+.post:last-child {padding:15px 0 0 0}
 .head-post {display:flex; align-items:center; justify-content:space-between; padding: 0 0 15px 0}
 /*FIRST-ROW-END*/
 
-/*SECOND-ROW*/
-.row:nth-child(2) {height:10%; padding:5px 45px}
-/*SECOND-ROW-END*/
+/*LOGO*/
+#news .news-frame:nth-child(2) {height:30%; padding:5px 0 0 0}
+#news .news-frame:nth-child(2) .frame.row {background:none; margin:0}
+#news .news-frame:nth-child(2) .col-xl-8 {padding:0; display:flex}
+#news .news-frame:nth-child(2) .col-xl-4 {padding:0}
+#logo {width:40%; padding:0 5px 0 0}
+#logo .frame {display:flex; justify-content:center}
+#logo .padding-logo {display:flex; align-items:center; justify-content:center; padding:20px 0}
+#image-logo {background:url('img/tpg.svg'); transition:all 0.3s; background-repeat:no-repeat; width:265px; height:133px}
+#image-logo.image{background-size:cover !important; position:relative;display:block}
+/*LOGO-END*/
 
-/*THREE-ROW*/
-.row:nth-child(3) {height:10%; padding:5px 45px 45px 45px}
-/*THREE-ROW-END*/
+/*TIME-DATE*/
+#timedate {width:30%; padding:0 5px}
+#timedate .frame {background:#d77a06}
+/*TIME-DATE-END*/
+
+/*WEATHER*/
+#weather {width:30%; padding:0 5px 0 5px}
+#weather .frame {background:#0759a2}
+/*WEATHER-END*/
+
+/*LESSONS*/
+#lessons {height:100%; padding:0 0 0 5px}
+#lessons .frame {padding:30px 25px}
+#lessons .row {padding:0; margin:0}
+#lessons .col-xl-6:first-child {padding:0 10px 0 0}
+#lessons .col-xl-6:last-child {padding:0 0 0 10px; border-left:2px solid #d77a06}
+#lessons ul {margin:0; padding:0}
+#lessons li {display:flex; justify-content:space-between; list-style:none; font-size:16px; font-family:OpenSans; padding:5px; transition:all.3s}
+#lessons span {transition:all.3s}
+#lessons li:hover {background:#d77a06; transition:all.3s}
+#lessons li:hover span {color:#fff; transition:all.3s}
+/*LESSONS-END*/
